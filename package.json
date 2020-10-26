@@ -12,8 +12,8 @@
     "@lugia/lugiax": "^1.1.13",
     "@lugia/lugiax-router": "^1.1.16",
     "history": "^4.7.2",
-    "react": "16.9.0",
-    "react-dom": "^16.6.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
