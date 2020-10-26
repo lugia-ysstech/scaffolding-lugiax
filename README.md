@@ -1,2 +1,2 @@
-# scaffoldings-lugiax
+# scaffolding-lugiax
 Use lugiax, lugia-web.
