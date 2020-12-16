@@ -20,15 +20,15 @@ export default () => {
     </Link>,
     createRoute({
       "/tomato/history": {
-        render: async () => import("./pages/history")
+        render: async () => import("./pages/history"),
       },
       "/tomato": {
         render: () => import("./pages/now"),
-        exact: true
+        exact: true,
       },
       "/tomato/now": {
-        render: () => import("./pages/now")
-      }
-    })
+        render: () => import("./pages/now"),
+      },
+    }),
   ];
 };

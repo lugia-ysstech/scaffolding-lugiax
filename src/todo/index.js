@@ -12,12 +12,11 @@ import todo from "./models/todo";
 
 const TodoList = connect(
   todo,
-  state => {
-    return { data: state.todo.get("tasks") };
+  (state) => {
+    return { data: state.get("tasks") };
   },
-  mutations => {
-    const { todo } = mutations;
-    return { delItem: todo.delTask };
+  (mutations) => {
+    return { delItem: mutations.delTask };
   }
 )(List);
 
@@ -27,28 +26,28 @@ const fieldName = fieldPath.join(".");
 const TodoInput = bindTo(
   todo,
   {
-    [fieldName]: "value"
+    [fieldName]: "value",
   },
   {
     onChange: {
       [fieldName](v) {
         return v;
-      }
-    }
+      },
+    },
   },
   {
-    onEnter() {
-      todo.mutations.addTask();
-    }
+    eventHandle: {
+      onEnter() {
+        todo.mutations.addTask();
+      },
+    },
   }
 )(InputTask);
 
-export default () => {
-  return (
-    <div>
-      <h1>To Do List</h1>
-      <TodoInput />
-      <TodoList />
-    </div>
-  );
-};
+export default () => (
+  <div>
+    <h1> To Do List </h1>
+    <TodoInput />
+    <TodoList />
+  </div>
+);

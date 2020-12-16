@@ -18,22 +18,22 @@ const { mutations } = tomato;
 const TomatoButton = bindTo(
   tomato,
   {
-    doing: "doing"
+    doing: "doing",
   },
   {},
   {
-    onClick() {
-      mutations.switch();
-    }
+    eventHandle: {
+      onClick() {
+        mutations.switch();
+      },
+    },
   }
 )(Button);
 const TomatoMessage = bindTo(
   tomato,
   {
-    error: "msg"
-  },
-  {},
-  {}
+    error: "msg",
+  }
 )(Message);
 
 const TomatoNowTimer = bindTo(
@@ -42,25 +42,21 @@ const TomatoNowTimer = bindTo(
     doing: "doing",
     beginAt: "beginAt",
     time: "time",
-    taskName: "taskName"
-  },
-  {},
-  {
-    onClick() {}
+    taskName: "taskName",
   }
 )(NowTimer);
 
 const TodoInput = bindTo(
   tomato,
   {
-    taskName: "value"
+    taskName: "value",
   },
   {
     onChange: {
       taskName(v) {
         return v;
-      }
-    }
+      },
+    },
   }
 )(InputTask);
 

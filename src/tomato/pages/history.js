@@ -10,16 +10,9 @@ import { bindTo } from "@lugia/lugiax";
 
 import History from "../components/History";
 
-const TomatoHistory = bindTo(
-  tomato,
-  {
-    tomotos: "data"
-  },
-  {},
-  {
-    onClick() {}
-  }
-)(History);
+const TomatoHistory = bindTo(tomato, {
+  tomotos: "data",
+})(History);
 
 export default () => {
   return <TomatoHistory />;
