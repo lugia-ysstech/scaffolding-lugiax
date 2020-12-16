@@ -8,16 +8,19 @@
     "test": "lugia-scripts test -w"
   },
   "dependencies": {
-    "@lugia/lugia-web": "^1.2.5",
-    "@lugia/lugiax": "^1.1.13",
-    "@lugia/lugiax-router": "^1.1.16",
+    "@lugia/dict": "^1.0.5",
+    "@lugia/lugia-web": "^1.2.8",
+    "@lugia/lugiax": "^1.2.3",
+    "@lugia/lugiax-router": "^1.2.2",
+    "@lugia/theme-config": "^1.1.7",
+    "@lugia/theme-core": "^1.1.13",
     "history": "^4.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
-    "@lugia/mega-scripts": "^1.6.4",
+    "@lugia/mega-scripts": "^1.6.7",
     "babel-plugin-import": "^1.11.0"
   }
 }
